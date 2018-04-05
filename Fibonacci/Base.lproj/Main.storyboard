@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fibonacci" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fib_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="fFp-e9-FOe">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fib_chalkboard2.png" translatesAutoresizingMaskIntoConstraints="NO" id="8EB-Qd-RR8">
+                                <rect key="frame" x="16.5" y="214.5" width="342" height="238"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="238" id="a8R-VA-70D"/>
+                                    <constraint firstAttribute="width" constant="342" id="tHn-qK-AZQ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJx-KG-1bf">
+                                <rect key="frame" x="114.5" y="171.5" width="146" height="24"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.43529411764705883" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="146" id="hq4-la-8Fe"/>
+                                    <constraint firstAttribute="height" constant="24" id="hyA-gA-qfP"/>
+                                </constraints>
+                                <state key="normal" title="Is It a Fibonacci #?">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="submitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W92-Wk-xmX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUv-XA-6dT">
+                                <rect key="frame" x="37" y="256" width="301" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="tWB-hI-v2Q"/>
+                                    <constraint firstAttribute="width" constant="301" id="xnN-Lx-U1T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BeU-WI-lNU">
+                                <rect key="frame" x="89" y="472.5" width="197" height="30"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.43529411764705883" blue="0.23921568627450979" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="HnE-5u-Vcs"/>
+                                    <constraint firstAttribute="width" constant="197" id="MIl-P4-LSt"/>
+                                </constraints>
+                                <state key="normal" title="Go to Sequence Generator">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wp8-YF-BvZ" kind="show" id="Pnj-I7-L5g"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Click to Enter #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-I6-XaE">
+                                <rect key="frame" x="126.5" y="116.5" width="122" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0Sa-4Z-xwX"/>
+                                    <constraint firstAttribute="width" constant="122" id="wpv-oC-YXo"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fFp-e9-FOe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="AEg-HT-f1G"/>
+                            <constraint firstItem="8EB-Qd-RR8" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CvE-dN-oy4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fFp-e9-FOe" secondAttribute="bottom" id="Fb2-YK-RBK"/>
+                            <constraint firstAttribute="trailing" secondItem="fFp-e9-FOe" secondAttribute="trailing" id="GHT-gc-Znt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fFp-e9-FOe" secondAttribute="bottom" id="HqG-b2-oUT"/>
+                            <constraint firstItem="fFp-e9-FOe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="MXM-0D-SXo"/>
+                            <constraint firstItem="dJx-KG-1bf" firstAttribute="top" secondItem="bWe-I6-XaE" secondAttribute="bottom" constant="25" id="Mfj-ku-r59"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fFp-e9-FOe" secondAttribute="bottom" id="Oy8-T4-7c0"/>
+                            <constraint firstItem="fFp-e9-FOe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Pyp-hu-h1a"/>
+                            <constraint firstAttribute="trailing" secondItem="fFp-e9-FOe" secondAttribute="trailing" id="SaX-nV-6fI"/>
+                            <constraint firstItem="8EB-Qd-RR8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="W6e-dj-C0x"/>
+                            <constraint firstAttribute="trailing" secondItem="fFp-e9-FOe" secondAttribute="trailing" id="Z2F-4r-rNS"/>
+                            <constraint firstItem="IUv-XA-6dT" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bgS-4D-CZT"/>
+                            <constraint firstItem="bWe-I6-XaE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bgS-4S-L1S"/>
+                            <constraint firstItem="fFp-e9-FOe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="eAy-O3-y5u"/>
+                            <constraint firstItem="fFp-e9-FOe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ggM-vg-lhP"/>
+                            <constraint firstItem="8EB-Qd-RR8" firstAttribute="top" secondItem="dJx-KG-1bf" secondAttribute="bottom" constant="19" id="hZ8-rp-AkX"/>
+                            <constraint firstItem="fFp-e9-FOe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ibh-QJ-hnu"/>
+                            <constraint firstItem="fFp-e9-FOe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="jF3-Wt-TJW"/>
+                            <constraint firstItem="dJx-KG-1bf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m6s-vj-3ms"/>
+                            <constraint firstItem="fFp-e9-FOe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="nj0-VN-iaQ"/>
+                            <constraint firstItem="BeU-WI-lNU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oGa-cO-l7V"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fFp-e9-FOe" secondAttribute="bottom" id="oaj-H5-eRK"/>
+                            <constraint firstAttribute="trailing" secondItem="fFp-e9-FOe" secondAttribute="trailing" id="qQ7-91-15e"/>
+                            <constraint firstItem="IUv-XA-6dT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tMz-HC-MNj"/>
+                            <constraint firstItem="BeU-WI-lNU" firstAttribute="top" secondItem="8EB-Qd-RR8" secondAttribute="bottom" constant="20" id="xrb-1c-uok"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enterNumberLabel" destination="bWe-I6-XaE" id="9xM-IY-agy"/>
+                        <outlet property="resultLabel" destination="IUv-XA-6dT" id="2MU-kJ-j2x"/>
+                        <outlet property="submitButton" destination="dJx-KG-1bf" id="tnV-bD-2zQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Sequence View Controller-->
+        <scene sceneID="1Bd-4i-8oc">
+            <objects>
+                <viewController id="wp8-YF-BvZ" customClass="SequenceViewController" customModule="Fibonacci" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hPR-FY-vQN"/>
+                        <viewControllerLayoutGuide type="bottom" id="7Mk-PI-fzS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y14-kN-ebO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fib_background.png" translatesAutoresizingMaskIntoConstraints="NO" id="HHd-AM-0HO">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2vo-mR-q0m">
+                                <rect key="frame" x="97.5" y="470.5" width="180" height="30"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.43529411759999997" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="7Wp-vH-4xe"/>
+                                    <constraint firstAttribute="width" constant="180" id="hiH-2K-BUF"/>
+                                </constraints>
+                                <state key="normal" title="Go to Fibonacci # Tester">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Hq4-Yw-eBg"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Fib_chalkboard2.png" translatesAutoresizingMaskIntoConstraints="NO" id="zfO-w9-6p1">
+                                <rect key="frame" x="16" y="213.5" width="343" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="47x-t5-M3a"/>
+                                    <constraint firstAttribute="width" constant="343" id="kVy-8J-feR"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgH-EG-Dsf">
+                                <rect key="frame" x="34" y="255.5" width="307" height="156"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="307" id="Dlk-e2-1yH"/>
+                                    <constraint firstAttribute="height" constant="156" id="HWf-K8-Ivk"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vWK-vx-2y4">
+                                <rect key="frame" x="107.5" y="172.5" width="160" height="26"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.43529411759999997" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="7GO-JW-wSo"/>
+                                    <constraint firstAttribute="height" constant="26" id="K5L-gw-2PP"/>
+                                </constraints>
+                                <state key="normal" title="Generate Sequence">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testAction:" destination="wp8-YF-BvZ" eventType="touchUpInside" id="j1E-tE-9Vi"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter sequence #" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bfd-M6-q78">
+                                <rect key="frame" x="120" y="116.5" width="135" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="phZ-xr-nJZ"/>
+                                    <constraint firstAttribute="width" constant="135" id="y8g-fX-iSE"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zfO-w9-6p1" firstAttribute="centerX" secondItem="Y14-kN-ebO" secondAttribute="centerX" id="9Ay-lP-Tg1"/>
+                            <constraint firstItem="PgH-EG-Dsf" firstAttribute="centerX" secondItem="Y14-kN-ebO" secondAttribute="centerX" id="9ab-7h-AQi"/>
+                            <constraint firstItem="vWK-vx-2y4" firstAttribute="centerX" secondItem="Y14-kN-ebO" secondAttribute="centerX" id="Hb3-q9-2cJ"/>
+                            <constraint firstItem="7Mk-PI-fzS" firstAttribute="top" secondItem="HHd-AM-0HO" secondAttribute="bottom" id="MCN-Om-pn7"/>
+                            <constraint firstItem="zfO-w9-6p1" firstAttribute="centerY" secondItem="Y14-kN-ebO" secondAttribute="centerY" id="W0t-MI-hLx"/>
+                            <constraint firstItem="vWK-vx-2y4" firstAttribute="top" secondItem="Bfd-M6-q78" secondAttribute="bottom" constant="26" id="YbR-AL-2a7"/>
+                            <constraint firstAttribute="trailing" secondItem="HHd-AM-0HO" secondAttribute="trailing" id="ZrO-lK-vvm"/>
+                            <constraint firstItem="HHd-AM-0HO" firstAttribute="leading" secondItem="Y14-kN-ebO" secondAttribute="leading" id="a30-Xf-aFQ"/>
+                            <constraint firstItem="PgH-EG-Dsf" firstAttribute="centerY" secondItem="Y14-kN-ebO" secondAttribute="centerY" id="a6r-VK-cv1"/>
+                            <constraint firstItem="zfO-w9-6p1" firstAttribute="top" secondItem="vWK-vx-2y4" secondAttribute="bottom" constant="15" id="ghR-Ye-M1K"/>
+                            <constraint firstItem="2vo-mR-q0m" firstAttribute="top" secondItem="zfO-w9-6p1" secondAttribute="bottom" constant="17" id="oyQ-5C-sEO"/>
+                            <constraint firstItem="2vo-mR-q0m" firstAttribute="centerX" secondItem="Y14-kN-ebO" secondAttribute="centerX" id="pc6-tv-XUd"/>
+                            <constraint firstItem="HHd-AM-0HO" firstAttribute="top" secondItem="Y14-kN-ebO" secondAttribute="top" id="z4O-Kn-x0W"/>
+                            <constraint firstItem="Bfd-M6-q78" firstAttribute="centerX" secondItem="Y14-kN-ebO" secondAttribute="centerX" id="zz4-1p-HuS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="numberTextField" destination="Bfd-M6-q78" id="jVO-yJ-QJ2"/>
+                        <outlet property="sequenceTextView" destination="PgH-EG-Dsf" id="EbC-5S-dP3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fu2-Gr-6hT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="853.60000000000002" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Fib_background.png" width="1080" height="1920"/>
+        <image name="Fib_chalkboard2.png" width="269" height="205"/>
+    </resources>
+</document>
