@@ -10,15 +10,12 @@ import UIKit
 
 class ViewController: UIViewController {
     
-//    var numberEntered = 0
     var num1 = 0
     var num2 = 0
     
 
     @IBOutlet weak var enterNumberLabel: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
-    
-    
     
     @IBAction func submitButtonPressed(_ sender: Any) {
         self.enterNumberLabel.resignFirstResponder()
@@ -33,11 +30,11 @@ class ViewController: UIViewController {
             resultLabel.text = "\(numberEntered) was entered"
             enterNumberLabel.text = ""
             if (numberEntered == 0) {
-                resultLabel.text = "0 is not a Fibonacci number. "
+                resultLabel.text = "0 is not a Fibonacci number. The first Fibonacci number is 1."
             } else if (numberEntered == 1) {
                 resultLabel.text = "Yes, \(numberEntered) is a Fibonacci number! It is the 1st and 2nd Fibonacci numbers."
             } else if (numberEntered > 2000000000) {
-                 resultLabel.text = "Please enter a smaller number"
+                 resultLabel.text = "Please enter a number between 0 and 2,000,000,000"
             } else {
 
                 while (numberEntered > newNum) {
@@ -54,9 +51,8 @@ class ViewController: UIViewController {
                 }
             }
         }
-        
         else {
-            resultLabel.text = "Please enter a number"
+            resultLabel.text = "Please enter a number between 0 and 2,000,000,000"
         }
     }
     
@@ -76,12 +72,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var submitButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -92,7 +86,6 @@ class ViewController: UIViewController {
         textField.resignFirstResponder()
         return true
     }
-
 
 }
 
